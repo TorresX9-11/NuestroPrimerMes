@@ -27,6 +27,26 @@
     }
 }
 /* ...existing code... */
+@media (max-width: 900px) {
+    .carousel-slide h3 {
+        font-size: 1.2em;
+        word-break: break-word;
+        text-align: center;
+        margin: 0.5em 0;
+        padding: 0 0.5em;
+    }
+    .carousel-slide p {
+        font-size: 1em;
+        word-break: break-word;
+        text-align: center;
+        margin: 0.5em 0;
+        padding: 0 0.5em;
+    }
+    .carousel-slide {
+        padding: 0.5em;
+        box-sizing: border-box;
+    }
+}
 .photo-carousel h2 {
     text-align: center;
 }
