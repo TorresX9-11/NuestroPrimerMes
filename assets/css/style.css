@@ -1,3 +1,19 @@
+.qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+.qr img {
+    max-width: 80vw;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(46,21,3,0.10);
+}
 /* ...existing code... */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
 
@@ -17,6 +33,51 @@ h1, h2, h3, h4 {
     color: var(--color-primario);
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+}
+section, .sorpresa-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(46,21,3,0.12);
+    margin: 1.2em 0;
+    padding: 1.2em;
+}
+
+.blog-post img,
+.qr img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(46,21,3,0.10);
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1.05em;
+        padding: 0.5em;
+    }
+    section, .sorpresa-section {
+        margin: 0.7em 0.2em;
+        padding: 0.8em;
+        border-radius: 14px;
+        box-shadow: 0 2px 12px rgba(46,21,3,0.18);
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .carta-contenido {
+        max-width: 95vw;
+        padding: 1em;
+    }
+    .carousel-slide img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
 }
 
 button, .dot {
