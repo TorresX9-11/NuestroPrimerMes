@@ -19,12 +19,6 @@
             <h2>Días juntos</h2>
             <p id="dias-juntos"></p>
         </section>
-        <script>
-            const inicio = new Date("2025-08-07");
-            const hoy = new Date();
-            const dias = Math.floor((hoy - inicio) / (1000 * 60 * 60 * 24));
-            document.getElementById("dias-juntos").textContent = `¡Llevamos ${dias} días juntos!`;
-        </script>
         <section class="music-dedication">
             <h2>Una canción para ti ❤ </h2>
             <p>Suba el volumen y presione play. Si estás en una computadora (lo dudo), también puedes escanear el código QR para escucharla en spotify.</p>
@@ -178,71 +172,48 @@
                         <p>...❤ :)...</p>
                     </div>
                 </div>
-                <!-- <div class="carousel-slide fade">
-                    <img src="img/Encuentro2.jpg" alt="Título o descripción de la foto 3">
+                <div class="carousel-slide fade">
+                    <img src="img/Llamada1.jpg" alt="Foto llamada1">
                     <div class="caption">
-                        <h3>¡El día de la sorpresa!</h3>
-                        <p>Cuando te llevé a la montaña...</p>
+                        <h3>Llamadita </h3>
+                        <p>"De hecho" ❤ adlkalkj</p>
                     </div>
-                </div> -->
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="img/Llamada2.jpg" alt="Foto Llamada2">
+                    <div class="caption">
+                        <h3>Llamadadita enojada</h3>
+                        <p>...❤ :)...</p>
+                    </div>
+                </div>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <br>
-
         </section>
-        
+
+
+        <section class="sorpresa-section">
+            <button id="btn-sorpresa">¡Sorpresa!</button>
+            <div id="carta-sorpresa" class="carta-sorpresa oculto">
+                <div class="carta-contenido">
+                    <h2>Para mi persona especial ❤</h2>
+                    <p>
+                        Gracias por este primer mes juntos. Cada momento contigo es único y especial.  
+                        Te amo y quiero segu
+                        ir sumando recuerdos a tu lado.  
+                        ¡Feliz primer mes, mi amor!
+                    </p>
+                    <button id="cerrar-carta">Cerrar</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>A+E ❤</p>
     </footer>
-
-    <script>
-    let slideIndex = 1; // 1. Inicializamos el índice en 1 (la primera foto).
-
-    showSlides(slideIndex); // 2. Mostramos la primera foto al cargar la página.
-
-    // 3. Función para cambiar de foto con los botones de navegación.
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    // 4. Función para ir a una foto específica al hacer clic en un punto.
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    // 5. La función principal que muestra las fotos y gestiona la lógica.
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("carousel-slide");
-      let dots = document.getElementsByClassName("dot");
-
-      // Si el índice es mayor al número de fotos, volvemos a la primera.
-      if (n > slides.length) {
-        slideIndex = 1
-      }    
-      // Si el índice es menor a 1, vamos a la última foto.
-      if (n < 1) {
-        slideIndex = slides.length
-      }
-
-      // Ocultamos todas las fotos.
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-
-      // Desactivamos el punto de la foto anterior.
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-
-      // Mostramos la foto actual y activamos su punto.
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-</script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
