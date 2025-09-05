@@ -72,4 +72,39 @@ document.addEventListener("DOMContentLoaded", function() {
             cartaSorpresa.classList.add("oculto");
         });
     }
+    
+        // Corazones emergentes en hover/clic/touch
+        function crearCorazonPop(x, y) {
+            const colores = ['#C9A66B', '#EEC9B7', '#2E1503'];
+            const color = colores[Math.floor(Math.random() * colores.length)];
+            const corazon = document.createElement('span');
+            corazon.className = 'corazon-pop';
+            corazon.style.left = (x - 11) + 'px';
+            corazon.style.top = (y - 11) + 'px';
+            corazon.innerHTML = `<svg viewBox="0 0 32 32" fill="${color}"><path d="M23.6,4.6c-2.1,0-4,1-5.6,2.7C16,7.9,15.9,8,15.8,8.1c-1.6-1.7-3.5-2.7-5.6-2.7C6.1,4.6,4,6.7,4,9.3c0,2.2,1.2,4.2,3.7,6.7c2.2,2.1,5.2,4.4,7.2,6c2-1.6,5-3.9,7.2-6c2.5-2.5,3.7-4.5,3.7-6.7C28,6.7,25.9,4.6,23.6,4.6z"/></svg>`;
+            document.body.appendChild(corazon);
+            setTimeout(() => corazon.remove(), 1000);
+        }
+    
+        // PC: click y arrastre
+        document.addEventListener('click', function(e) {
+            crearCorazonPop(e.clientX, e.clientY);
+        });
+        document.addEventListener('mousemove', function(e) {
+            if (e.buttons === 1) {
+                crearCorazonPop(e.clientX, e.clientY);
+            }
+        });
+    
+        // Móvil: touch
+        document.addEventListener('touchstart', function(e) {
+            for (let t of e.touches) {
+                crearCorazonPop(t.clientX, t.clientY);
+            }
+        });
+        document.addEventListener('touchmove', function(e) {
+            for (let t of e.touches) {
+                crearCorazonPop(t.clientX, t.clientY);
+            }
+        });
 });
